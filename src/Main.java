@@ -32,15 +32,3 @@ public class Main {
     }
 }
 
-class Pieces {
-    private int pieceColumn, pieceRow, pieceDimension;
-    private BufferedImage pieceImage;
-
-    public piece(BufferedImage image, int column, int row, int dimension) {
-        pieceImage = image;
-        pieceColumn = column;
-        pieceRow = row;
-        pieceDimension = dimension;
-    }
-}
-
