@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.swing.*;
 
@@ -19,7 +18,7 @@ public class Main {
             int col = i % 8;
 
             JPanel panel = new JPanel();
-            JLabel label = new JLabel(String.valueOf(col) + "," + String.valueOf(row));
+            JLabel label = new JLabel(col + "," + row);
             if ((col + row) % 2 == 0) {
                 panel.setBackground(light);
             } else {
