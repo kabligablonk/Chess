@@ -1,5 +1,7 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class Main {
@@ -10,8 +12,8 @@ public class Main {
         window.setResizable(false);
         window.setLayout(new GridLayout(8, 8,1,1));
 
-        Color light = new Color(255,255,255);
-        Color dark = new Color(0,0,0);
+        Color light = new Color(222, 206, 214);
+        Color dark = new Color(162, 79, 16);
 
         for (int i = 0; i < 64; i++) {
             int row = i / 8;
@@ -31,3 +33,18 @@ public class Main {
     }
 }
 
+class Loader {
+    BufferedImage img;
+    {
+        try {
+            img = ImageIO.read(new File("pawn.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    protected void draw(Graphics image) {
+        super.paintComponent();
+        image.drawImage(image, 50, 50, null);
+    }
+}
